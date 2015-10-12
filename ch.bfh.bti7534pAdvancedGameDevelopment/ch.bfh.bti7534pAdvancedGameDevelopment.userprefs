@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BoxingIK.cs">
+    <Files>
+      <File FileName="Assets/Scripts/PlayerBehaviour.cs" Line="14" Column="49" />
+      <File FileName="Assets/Scripts/PlayerBehaviour_smoothwave.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerControlCS.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/HoldingObject.cs" Line="33" Column="30" />
+      <File FileName="Assets/Scripts/BoxingIK.cs" Line="41" Column="67" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
