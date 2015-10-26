@@ -538,7 +538,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 37c486125a277e644954c21b38ad7285, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -905,6 +905,10 @@ Material:
         second: 0
       data:
         first:
+          name: _EmissionScaleUI
+        second: 2
+      data:
+        first:
           name: _Mode
         second: 0
       data:
@@ -915,10 +919,6 @@ Material:
         first:
           name: _Lightmapping
         second: 1
-      data:
-        first:
-          name: _EmissionScaleUI
-        second: 2
     m_Colors:
       data:
         first:
@@ -1251,7 +1251,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 4a80bd1f41c12964fbde5b6f70675970, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1

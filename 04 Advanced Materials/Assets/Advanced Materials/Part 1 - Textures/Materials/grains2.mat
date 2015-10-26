@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: grains2
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _NORMALMAP
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -19,14 +19,14 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 0cc657f6ef446b743a21c5290bcd4af1, type: 3}
-          m_Scale: {x: 2, y: 2}
+          m_Texture: {fileID: 2800000, guid: 9668a302d7c711e499f85d01ef5f5dd4, type: 3}
+          m_Scale: {x: 4, y: 4}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _BumpMap
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 87f265a706293d944ab6b1064f772a26, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -47,7 +47,7 @@ Material:
         first:
           name: _OcclusionMap
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: cb9fd399c80194d4eb69bcc7d0a44345, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -55,7 +55,7 @@ Material:
           name: _EmissionMap
         second:
           m_Texture: {fileID: 0}
-          m_Scale: {x: 2, y: 2}
+          m_Scale: {x: 4, y: 4}
           m_Offset: {x: 0, y: 0}
       data:
         first:
@@ -106,11 +106,11 @@ Material:
       data:
         first:
           name: _BumpScale
-        second: 1
+        second: .5
       data:
         first:
           name: _OcclusionStrength
-        second: 1
+        second: .593999982
       data:
         first:
           name: _DetailNormalMapScale
@@ -135,4 +135,4 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
+        second: {r: .996348858, g: 1, b: .735294104, a: 1}
