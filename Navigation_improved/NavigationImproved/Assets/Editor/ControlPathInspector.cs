@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEditor;
 using System;
+using System.Linq;
 
 // Damit Objekte mit der Klasse "PatrolPath" einen eigenen Inspector kriegen
 [CustomEditor(typeof(PatrolPath))]
@@ -38,6 +39,27 @@ public class ControlPathInspector : Editor
                 script.waypoints[i] = result;
             }
 
+            var oldEnabled = GUI.enabled;
+
+            GUI.enabled &= CanMoveUp(i);
+            if (GUILayout.Button("U", GUILayout.Width(25.0f)))
+            {
+                SwapWaypoints(i, i - 1);
+            }
+
+            GUI.enabled = oldEnabled && CanMoveDown(i);
+            if (GUILayout.Button("D", GUILayout.Width(25.0f)))
+            {
+                SwapWaypoints(i, i + 1);
+            }
+
+            if (GUI.changed)
+            {
+                SceneView.RepaintAll();
+            }
+
+            GUI.enabled = oldEnabled;
+
             if (GUILayout.Button("-", GUILayout.Width(25f)))
             {
                 RemoveWaypoint(i);
@@ -61,7 +83,7 @@ public class ControlPathInspector : Editor
         GameObject go = new GameObject("Waypoint");
         go.transform.parent = script.transform;
         // TODO setze Position vom letzten Waypoint in der Liste
-        go.transform.localPosition = Vector3.zero;
+        go.transform.localPosition = script.waypoints.Last().localPosition;
 
         go.AddComponent<Waypoint>();
 
@@ -72,5 +94,22 @@ public class ControlPathInspector : Editor
     {
         DestroyImmediate(script.waypoints[index].gameObject);
         script.waypoints.Remove(script.waypoints[index]);
+    }
+
+    void SwapWaypoints(int i0, int i1)
+    {
+        var waypointTemp = script.waypoints[i0];
+        script.waypoints[i0] = script.waypoints[i1];
+        script.waypoints[i1] = waypointTemp;
+    }
+
+    bool CanMoveUp(int index)
+    {
+        return index > 0;
+    }
+
+    bool CanMoveDown(int index)
+    {
+        return index < (script.waypoints.Count - 1);
     }
 }
